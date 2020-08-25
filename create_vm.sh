@@ -11,9 +11,17 @@ qm create $VMID \
   --memory 16384 \
   --ostype l26 \
   --ide2 nas-data1-iso:iso/ubuntu-20.04.1-live-server-amd64.iso,media=cdrom \
-  --scsi0 nas-data1-vm:$VMID/vm-$VMID-disk-0.qcow2,discard=on,size=256G,ssd=1 \
+  --scsi0 nas-data1-vm:$VMID,format=qcow2,discard=on,size=256G,ssd=1 \
   --scsihw virtio-scsi-pci \
   --bootdisk scsi0 \
   --net0 virtio,bridge=vmbr0,firewall=1 \
   --onboot 1 \
   --numa 0
+
+# shrink the disk image (SLOW)
+# https://pve.proxmox.com/wiki/Shrink_Qcow2_Disk_Files
+
+DISKFILE=/mnt/nas/data1/vm/images/$VMID/vm-$VMID-disk-0.qcow2
+mv $DISKFILE $DISKFILE.orig
+qemu-img convert -O qcow2 -c $DISKFILE.orig $DISKFILE
+rm $DISKFILE.orig
