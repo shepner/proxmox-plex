@@ -21,8 +21,7 @@ qm create $VMID \
 # shrink the resulting image
 # https://pve.proxmox.com/wiki/Shrink_Qcow2_Disk_Files
 
-mv /mnt/nas/data2/vm/images/$VMID/vm-$VMID-disk-0.qcow2 /mnt/nas/data2/vm/images/$VMID/vm-$VMID-disk-0.qcow2.orig
-
-qemu-img convert -O qcow2 -c /mnt/nas/data2/vm/images/$VMID/vm-$VMID-disk-0.qcow2.orig /mnt/nas/data2/vm/images/$VMID/vm-$VMID-disk-0.qcow2
-
-rm /mnt/nas/data2/vm/images/$VMID/vm-$VMID-disk-0.qcow2.orig
+DISKFILE=/mnt/nas/data1/vm/images/$VMID/vm-$VMID-disk-0.qcow2
+mv $DISKFILE $DISKFILE.orig
+qemu-img convert -O qcow2 -c $DISKFILE.orig $DISKFILE
+rm $DISKFILE.orig
