@@ -15,8 +15,14 @@ rm /tmp/plexmediaserver.deb
 
 # http://<IP address>:32400/web
 
+# fix the UID/GID
+sudo service plexmediaserver stop
+sudo usermod -u 1003 plex
+sudo groupmod -o -g 1000 plex
+sudo chown -R 1003:1000 /var/lib/plexmediaserver
+sudo service plexmediaserver start
+
 
 cp ~/proxmox-plex/setup/update-plex.sh ~
 chmod 774 ~/update-plex.sh
 ~/update-plex.sh
-
