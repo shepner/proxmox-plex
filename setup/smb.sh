@@ -15,4 +15,4 @@ chmod 600 ~/.smbcredentials
 echo "Run 'vi ~/.smbcredentials' and edit the user ID/password"
 
 sudo mkdir -p /mnt/nas/data1/media
-echo "//nas/media /mnt/nas/data1/media cifs rw,uid=`id -un`,gid=asyla,credentials=/home/`id -un`/.smbcredentials 0 0" | sudo tee --append /etc/fstab
+echo "//nas/media /mnt/nas/data1/media cifs rw,uid=1003,gid=1000,credentials=/home/`id -un`/.smbcredentials 0 0" | sudo tee --append /etc/fstab
