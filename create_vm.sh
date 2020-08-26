@@ -1,4 +1,8 @@
 #!/bin/sh
+# [Cloud-Init Support](https://pve.proxmox.com/wiki/Cloud-Init_Support)
+
+# fetch the image
+#wget -O /tmp/focal-server-cloudimg-amd64.img https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img
 
 # Create the VM Proxmox
 # [10.12. Managing Virtual Machines with qm](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#_managing_virtual_machines_with_span_class_monospaced_qm_span)
@@ -18,6 +22,9 @@ qm create $VMID \
   --onboot 1 \
   --numa 0
 
+# remove the image
+#rm /tmp/focal-server-cloudimg-amd64.img
+
 # shrink the disk image (SLOW)
 # https://pve.proxmox.com/wiki/Shrink_Qcow2_Disk_Files
 
@@ -25,3 +32,5 @@ DISKFILE=/mnt/nas/data1/vm/images/$VMID/vm-$VMID-disk-0.qcow2
 mv $DISKFILE $DISKFILE.orig
 qemu-img convert -O qcow2 -c $DISKFILE.orig $DISKFILE
 rm $DISKFILE.orig
+
+qm start $VMID
