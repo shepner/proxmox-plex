@@ -2,7 +2,7 @@
 
 # simple script for updating the scripts from github
 cat > ~/update-scripts.sh << EOF
-cd ~/docker-ubuntu
+cd ~/proxmox-plex
 git pull
 EOF
 chmod 754 ~/update-scripts.sh
