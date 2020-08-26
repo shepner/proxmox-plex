@@ -16,5 +16,3 @@ echo "Run 'vi ~/.smbcredentials' and edit the password"
 
 sudo mkdir -p /mnt/nas/data1/media
 echo "//nas/media /mnt/nas/data1/media cifs rw,uid=docker,gid=asyla,credentials=/home/`id -un`/.smbcredentials 0 0" | sudo tee --append /etc/fstab
-
-sudo mount -a
