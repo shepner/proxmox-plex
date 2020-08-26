@@ -52,7 +52,6 @@ chmod 774 *.sh
 
 ./userConfig.sh
 ./systemConfig.sh
-./nfs.sh
-./docker.sh
+./smb.sh
 ```
 
