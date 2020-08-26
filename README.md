@@ -53,5 +53,6 @@ chmod 774 *.sh
 ./userConfig.sh
 ./systemConfig.sh
 ./smb.sh
+./plex.sh
 ```
 
