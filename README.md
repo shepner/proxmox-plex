@@ -51,6 +51,7 @@ bash <(curl -s https://raw.githubusercontent.com/shepner/proxmox-plex/master/upd
 
 ~/scripts/setup/userConfig.sh
 ~/scripts/setup/systemConfig.sh
+~/scripts/setup/nfs.sh
 ~/scripts/setup/smb.sh
 ~/scripts/setup/plex.sh
 ```
