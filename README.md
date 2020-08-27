@@ -47,9 +47,10 @@ ssh $DHOST "chmod -R 700 ~/.ssh"
 ``` shell
 bash <(curl -s https://raw.githubusercontent.com/shepner/proxmox-plex/master/update-scripts.sh)
 
+~/update.sh
+
 ~/scripts/setup/userConfig.sh
 ~/scripts/setup/systemConfig.sh
 ~/scripts/setup/smb.sh
 ~/scripts/setup/plex.sh
 ```
-
