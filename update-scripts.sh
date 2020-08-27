@@ -4,7 +4,7 @@ REPO=proxmox-plex
 
 sudo rm -R ~/$REPO
 
-git clone https://github.com/shepner/$REPO.git ~
+git clone https://github.com/shepner/$REPO.git ~/$REPO
 
 chmod -R 754 ~/$REPO/*.sh
 
