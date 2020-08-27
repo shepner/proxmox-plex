@@ -45,14 +45,11 @@ ssh $DHOST "chmod -R 700 ~/.ssh"
 ## Configure the system
 
 ``` shell
-git clone https://github.com/shepner/proxmox-plex.git
+bash <(curl -s https://raw.githubusercontent.com/shepner/proxmox-plex/master/update-scripts.sh)
 
-cd ~/proxmox-plex/setup
-chmod 774 *.sh
-
-./userConfig.sh
-./systemConfig.sh
-./smb.sh
-./plex.sh
+~/proxmox-plex/setup/userConfig.sh
+~/proxmox-plex/setup/systemConfig.sh
+~/proxmox-plex/setup/smb.sh
+~/proxmox-plex/setup/plex.sh
 ```
 
