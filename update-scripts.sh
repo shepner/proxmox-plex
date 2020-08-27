@@ -1,11 +1,13 @@
 #!/bin/sh
 
-REPO=proxmox-plex
+REPO=shepner/proxmox-plex
 
-sudo rm -R ~/$REPO
+if [ -d ~/scripts ]; then
+  sudo rm -R ~/scripts
+fi
 
-git clone https://github.com/shepner/$REPO.git ~/$REPO
+git clone https://github.com/$REPO.git ~/scripts
 
-chmod -R 754 ~/$REPO/*.sh
+chmod -R 754 ~/scripts/*.sh
 
-mv ~/*.sh ~
+mv ~/scripts/*.sh ~
