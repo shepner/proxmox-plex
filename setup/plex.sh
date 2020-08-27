@@ -23,6 +23,6 @@ sudo chown -R 1003:1000 /var/lib/plexmediaserver
 sudo service plexmediaserver start
 
 
-cp ~/proxmox-plex/setup/update-plex.sh ~
+cp ~/proxmox-plex/update-plex.sh ~
 chmod 774 ~/update-plex.sh
 ~/update-plex.sh
