@@ -3,7 +3,7 @@
 run the following
 
 ``` shell
-bash <(curl -s https://raw.githubusercontent.com/shepner/proxmox-plex/master/setup/create_vm.sh)
+bash <(curl -s https://raw.githubusercontent.com/shepner/proxmox-plex/master/proxmox/create_vm.sh)
 ```
 
 install Ubuntu 20.04 the usual way.
