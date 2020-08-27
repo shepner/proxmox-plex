@@ -24,7 +24,7 @@ qm create $VMID \
   --net0 virtio,bridge=vmbr0,firewall=1 \
   --onboot 1 \
   --numa 0
-qm resize $VMID scsi0 256G # [resize disks](https://pve.proxmox.com/wiki/Resize_disks)
+qm resize $VMID scsi0 512G # [resize disks](https://pve.proxmox.com/wiki/Resize_disks)
 
 # remove the image
 #rm /tmp/focal-server-cloudimg-amd64.img
