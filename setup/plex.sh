@@ -11,7 +11,7 @@ sudo apt-get update
 URL="https://plex.tv/downloads/latest/1?channel=8&build=linux-ubuntu-x86_64&distro=ubuntu"
 sudo curl $URL -L -o /tmp/plexmediaserver.deb
 sudo dpkg -i /tmp/plexmediaserver.deb
-rm /tmp/plexmediaserver.deb
+sudo rm /tmp/plexmediaserver.deb
 
 # http://<IP address>:32400/web
 
