@@ -2,8 +2,10 @@
 
 sudo service plexmediaserver stop
 
-#sudo rsync -a /var/lib/plexmediaserver /mnt/nas/docker1/plex.backup/
-sudo sudo tar -cvf /mnt/nas/docker1/plex.backup/plexmediaserver.tar -C /var/lib/ plexmediaserver
+# need to use `tar` because rsync throws errors
+#sudo sudo tar -cvf /mnt/nas/docker1/plex.backup/plexmediaserver.tar -C /var/lib/ plexmediaserver
+#sudo sudo tar -cvf /mnt/nas/docker1/plex.backup/plexmediaserver.tar -C /var/lib/ plexmediaserver
+sudo sudo tar -cvf /mnt/nas/data1/docker/plex.backup/plexmediaserver.tar -C /var/lib/ plexmediaserver
 
 # To restore:
 #sudo tar -xvf /mnt/nas/data1/docker/plex.backup/plexmediaserver.tar -C /var/lib/
