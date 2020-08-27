@@ -10,6 +10,8 @@ install Ubuntu 20.04 the usual way.
 
 provide a static IP address
 
+DNS: 10.0.0.5,208.67.222.222,208.67.220.220
+
 install OpenSSH
 
 ## Fix the UID
